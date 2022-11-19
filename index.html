@@ -71,6 +71,36 @@
         <!-- modal window for the button -->
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
+            <form class="form js-speaker-form">
+              <h1 class="form-titel">Залиште свої дані, ми вам передзвонимо</h1>
+              <div class="form-items">
+                <div class="form-field">
+                  <label class="label" for="name">Ім'я</label>
+                  <input class="input-field" type="text" name="user-name" id="name" />
+                </div>
+                <div class="form-field">
+                  <label class="label" for="tel"> Телефон</label>
+                  <input class="input-field" type="tel" name="tel" id="tel" />
+                </div>
+                <div class="form-field">
+                  <label class="label" for="email"> Пошта</label>
+                  <input class="input-field" type="email" name="email" id="email" />
+                </div>
+                <div class="form-field">
+                  <label class="label" for="feedback"> Коментар</label>
+                  <textarea class="input-field" name="feedback" rows="5" placeholder="Введіть текст"> </textarea>
+                </div>
+              </div>
+              <div class="form-checkbox">
+                <input type="checkbox" id="consent" />
+                <label for="consent">
+                  Погоджуюся з розсилкою та приймаю
+                  <a href="">Умови договору</a></label
+                >
+              </div>
+
+              <button class="button main" type="submit">Відправити</button>
+            </form>
             <button data-modal-close class="btn-close">
               <img class="icon-close" src="./images/close.svg" alt="закрити" />
             </button>
@@ -431,7 +461,7 @@
           </address>
         </div>
         <section class="section-media">
-          <h3 class="media-titel">Приєднуйтесь</h3>
+          <h3 class="footer-titel">Приєднуйтесь</h3>
           <ul class="social-media list">
             <li class="media-icon footer">
               <a href="http://">
@@ -463,8 +493,27 @@
             </li>
           </ul>
         </section>
+        <section class="folow">
+          <h3 class="footer-titel">підпишіться на розсилку</h3>
+          <form class="form-footer" action="">
+            <div class="flex">
+              <label class="no-display" for="email">email</label>
+              <input
+                class="input-field footer"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+
+              <button class="button main" type="submit">Підписатися</button>
+            </div>
+          </form>
+        </section>
       </div>
     </footer>
+    <!-- put on console output -->
+
     <script src="./js/modal.js"></script>
   </body>
 </html>

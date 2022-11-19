@@ -66,7 +66,13 @@ p {
 .image-no-gap {
   display: block;
 }
-
+/* приховує видимість обєкту */
+.no-opacity{
+  opacity: 0;
+}
+.no-display{
+display: none;
+}
 /***** стайл хедер******************************* */
 /**/
 .header-underline {
@@ -237,6 +243,8 @@ p {
   text-transform: uppercase;
   color: var(--primary-white-color);
 }
+
+
 /*стайл основи для модального вікна*/
 .backdrop {
   position: fixed;
@@ -249,18 +257,90 @@ p {
 /* стайл модального вікна */
 .modal {
   position: absolute;
+  width: 528px;
+    /*581px*/
+    /*528px */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  height: 528px;
-  width: 581px;
+  display: block;  
 
   background: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+/*стайл форми*/
+.form{  
+  margin: 40px;
+}
+/* стайл заголовка у форми */
+.form-titel{
+  margin-bottom: 12px;
+
+  font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+}
+/* стайл блоку введення у формі */
+.form-items{
+margin-bottom: 20px;
+}
+/* стайл полів введення у формі */
+.form-field{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: flex-start;  
+}
+/* стайл лейбел  */
+.label{
+  margin-bottom: 4px;
+    font-size: 12px;
+      line-height: 1.16em;
+      letter-spacing: 0.01em;
+      color: var(--primary-text-color);      
+}
+
+.input-field{
+  width: 100%;
+  padding: 12px 14px;
+
+  font-size: 16px;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: rgba(33, 33, 33, 0.2);
+  border-style: solid;
+}
+/*стайл полів введення в активному стані*/
+.input-field.footer:focus,
+.input-field.footer:hover,
+.input-field:focus,
+.input-field:hover{
+  border-color: var(--accent-color);
+}
+/*стайл полів введення в активному стані*/
+.input-field.footer:focus-visible,
+.input-field:focus-visible{
+  outline-color: var(--accent-color);
+  
+}
+.form-checkbox{
+  margin-bottom: 30px;
+
+}
+/* стайл placeholder в текстовому редакторі */
+.input-field::placeholder{
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  
+  color: rgba(117, 117, 117, 0.5);
+}
+
 /*скриває модальне вікно*/
 .backdrop.is-hidden {
   visibility: hidden;
@@ -269,8 +349,9 @@ p {
 }
 /* стайл лголовна кнопка */
 .button.main {
-  padding: 10px 32px;
-  min-width: 216px;
+  padding:10px 32px;
+  
+  min-width: 200px;
   align-items: center;
   justify-content: center;
 
@@ -532,7 +613,7 @@ p {
   margin-left: 70px;
   /* background-color: #2196f3; */
 }
-.media-titel {
+.footer-titel {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -563,6 +644,20 @@ p {
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/*стайл сеції підписатись на розсилку*/
+.folow {
+  margin-left: auto; 
+}
+.form-footer{
+  width: 570px;
+}
+.input-field.footer{
+  margin-right: 12px;
+  background-color:var(--sec-bgr-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
 
 /******main portfolio.htlm************************************/
 /* стайл кнопка меню */
