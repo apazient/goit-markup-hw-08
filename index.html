@@ -9,51 +9,46 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
+    
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
     <!--header-->
-    <header class="header-underline">
-      <div class="container flex">
+    <header class="page-header">
+      <div class="container-flex">
         <!--navigation-->
-        <nav class="main-nav">
+        <nav class="navigation">
           <!--logo-->
-          <a href="./index.html" class="logo up" lang="en"
-            >Web<span class="logo-back">Studio</span></a
+          <a href="./index.html" class="logo" lang="en"
+            >Web<span class="logo page-header__logo">Studio</span></a
           >
           <!--menu-->
-          <ul class="list site-nav">
-            <li class="menu-item"><a href="" class="link link-nav current">Студія</a></li>
-            <li class="menu-item">
-              <a href="./portfolio.html" class="link link-nav">Портфоліо</a>
+          <ul class="nav ">
+            <li class="nav__item">
+              <a href="" class=" nav__link nav__link--current">Студія</a></li>
+            <li class="nav__item">
+              <a href="./portfolio.html" class="nav__link">Портфоліо</a>
             </li>
-            <li class="menu-item"><a href="" class="link link-nav">Контакти</a></li>
+            <li class="nav__item"><a href="" class="nav__link">Контакти</a></li>
           </ul>
         </nav>
         <!--contacts-->
-        <ul class="list cont-nav">
+        <ul class="contact">
           <!--email-->
-          <li class="contact-item">
-            <a href="mailto:info@devstudio.com" class="link contacts">
-              <svg class="svg-cont" width="16" height="12">
+          <li class="contact__item">
+            <a href="mailto:info@devstudio.com" class="contact__link">
+              <svg class="contact__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
           <!--telnummber-->
-          <li class="contact-item">
-            <a href="tel:+380961111111" class="link contacts">
-              <svg class="svg-cont" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
+          <li class="contact__item">
+            <a href="tel:+380961111111" class="contact__link">
+              <svg class="contact__icon" width="10" height="16">
+                <use  href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
@@ -64,73 +59,73 @@
 
     <!--main content of page-->
     <main>
-      <section class="hero img-hero">
-        <h1 class="titel">
+      <section class="hero">
+        <h1 class="hero__titel">
           ефективні рішення для <br />
           вашого бізнесу
         </h1>
         <!--button order-->
-        <button class="button main" data-modal-open>Замовити послугу</button>
+        <button class="button" data-modal-open>Замовити послугу</button>
       </section>
       <!--features-->
       <section class="section">
         <div class="container">
           <!--headline feacher-->
-          <h2 class="section-titel opacity">переваги</h2>
-          <ul class="list feacher">
+          <h2 class="section__title section__title--opacity">переваги</h2>
+          <ul class="feacher">
             <!--featcher 1-->
-            <li class="item">
-              <div class="icon-feacher">
+            <li class="feacher__item">
+              <div class="feacher__icon">
                 <svg width="65" height="70">
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
               <!--feacher head-->
-              <h3 class="sub-titel">увага до деталей</h3>
+              <h3 class="feacher__title">увага до деталей</h3>
               <!--featcher description-->
-              <p class="description">
+              <p class="feacher__description">
                 Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
               </p>
             </li>
             <!--featcher 2-->
-            <li class="item">
-              <div class="icon-feacher">
+            <li class="feacher__item">
+              <div class="feacher__icon">
                 <svg width="67" height="70">
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
               <!--feacher head-->
-              <h3 class="sub-titel">пунктуальність</h3>
+              <h3 class="feacher__title">пунктуальність</h3>
               <!--featcher description-->
-              <p class="description">
+              <p class="feacher__description">
                 Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
               </p>
             </li>
             <!--featcher 3-->
-            <li class="item">
-              <div class="icon-feacher">
+            <li class="feacher__item">
+              <div class="feacher__icon">
                 <svg width="70" height="54">
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
               <!--feacher head-->
-              <h3 class="sub-titel">планування</h3>
+              <h3 class="feacher__title">планування</h3>
               <!--featcher description-->
-              <p class="description">
+              <p class="feacher__description">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
             <!--featcher 4-->
-            <li class="item">
-              <div class="icon-feacher">
+            <li class="feacher__item">
+              <div class="feacher__icon">
                 <svg width="55" height="60">
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
               <!--feacher head-->
-              <h3 class="sub-titel">сучасні технології</h3>
+              <h3 class="feacher__title">сучасні технології</h3>
               <!--featcher description-->
-              <p class="description">
+              <p class="feacher__description">
                 Значимість цих проблем настільки очевидна, що реалізація планових завдань.
               </p>
             </li>
@@ -403,11 +398,11 @@
     </main>
     <!--footer of page-->
     <footer class="section-footer">
-      <div class="container flex">
+      <div class="container-flex">
         <div>
           <!--logo-->
-          <a href="./index.html" class="logo down" lang="en">
-            Web<span class="logo-back-sec">Studio</span>
+          <a href="./index.html" class="logo" lang="en">
+            Web<span class="page-footer__logo">Studio</span>
           </a>
           <!--contacts-->
           <address class="adr">

@@ -1,0 +1,60 @@
+/*cтилізує контент по центрі сторінки*/
+.container {
+  @extend%container;
+}
+
+.container-flex {
+  @extend%container;
+  display: flex;
+}
+
+/* стайл лголовна кнопка */
+.button {
+  @extend%btn;
+  padding: 10px 32px;
+  min-width: 216px;
+  align-items: center;
+  justify-content: center;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $primary-white-color;
+  background-color: $accent-color;
+  box-shadow: none;
+  transition: box-shadow $transititon-time $cubic-fnc;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.opacity {
+  position: absolute;
+  opacity: 0;
+}
+.section__title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+}
+.section__title--opacity {
+    @extend .opacity;
+}
+.sub-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

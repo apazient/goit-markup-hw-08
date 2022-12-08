@@ -1,0 +1,53 @@
+//container navigation
+.navigation {
+  display: flex;
+  align-items: center;
+}
+//navigation
+.nav {
+  @extend%list;
+
+  @extend%flex-ml-h;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+
+  &__item {
+    position: relative;
+  }
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__link {
+    display: block;
+    padding: 32px 0;
+    color: $title-text-color;
+    transition: coloor $transititon-time $cubic-fnc;    
+  }
+     &__link:hover,
+     &__link:focus {
+       color: $accent-color;
+     }
+}
+.nav__link{
+    &--current{
+        color: $accent-color;
+    }
+    
+}
+.nav__link--current::after{
+  position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px 2px 2px 2px;
+    opacity: 1;
+    transition: opacity $transititon-time $cubic-fnc;
+}

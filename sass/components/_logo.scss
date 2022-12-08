@@ -1,0 +1,16 @@
+
+.logo{
+    @extend%logo;
+    color: $accent-color;
+}
+.page-header__logo {
+    @extend%logo;
+    margin-right: 93px;
+    color: $logo-black-color;
+}
+.page-footer__logo{
+    @extend%logo;
+    
+        margin-bottom: 20px;
+        color: $primary-white-color;
+}

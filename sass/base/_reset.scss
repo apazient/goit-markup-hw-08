@@ -1,0 +1,23 @@
+/* стайл основа */
+body {
+    font-family: Roboto, sans-serif;
+    /* font-weight: 400; */
+    font-size: 14px;
+    line-height: 1.71;
+    color: $primary-text-color;
+    background-color: $primary-white-color;
+}
+/* стайл лінків */
+a {
+    text-decoration: none;
+}
+/*чистить відступи у заголовках і абзаці*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
