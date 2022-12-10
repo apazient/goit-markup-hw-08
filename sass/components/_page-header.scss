@@ -2,4 +2,53 @@
 .page-header {
     border-bottom: 1px solid #ececec;
 }
+//flex container
+.header__container{
+    display: flex;
+}
+//styles contact of the firma
+.contact {
+    display: flex;
+    margin-left: auto;
+        height: 100%;
+    &__item {
+        display: block;
+    }
 
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__link {
+        display: flex;
+        padding: 32px 0;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: $primary-text-color;
+        transition: color $transititon-time $cubic-fnc;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $accent-color;
+    }
+
+    &__icon {
+        padding: 0;
+        margin-right: 10px;
+        fill: $primary-text-color;
+        transition: fill $transititon-time $cubic-fnc;
+    }
+
+}
+
+.contact__icon {
+
+    .contact__link:hover &,
+    .contact__link:focus & {
+        fill: $accent-color;
+    }
+}

@@ -1,16 +1,22 @@
-
-.logo{
-    @extend%logo;
-    color: $accent-color;
-}
-.page-header__logo {
-    @extend%logo;
-    margin-right: 93px;
-    color: $logo-black-color;
-}
-.page-footer__logo{
-    @extend%logo;
-    
+.logo {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em; 
+  color: $accent-color;
+  &__header {
+   
+        color: $logo-black-color;
+        margin-right: 93px;
+    }
+    &__footer {
+        
         margin-bottom: 20px;
         color: $primary-white-color;
+    }
+
 }
+
+
+

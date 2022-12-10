@@ -25,18 +25,18 @@
         <a href="./index.html" class="logo up" lang="en">Web<span class="logo-back">Studio</span></a>
         <!--menu-->
         <ul class="list site-nav">
-          <li class="menu-item"><a href="./index.html" class="link link-nav ">Студія</a></li>
+          <li class="menu-item"><a href="./index.html" class="link-nav ">Студія</a></li>
           <li class="menu-item">
-            <a href="./portfolio.html" class="link link-nav current">Портфоліо</a>
+            <a href="./portfolio.html" class="link-nav current">Портфоліо</a>
           </li>
-          <li class="menu-item"><a href="" class="link link-nav">Контакти</a></li>
+          <li class="menu-item"><a href="" class=" link-nav">Контакти</a></li>
         </ul>
       </nav>
       <!--contacts-->
       <ul class="list cont-nav">
         <!--email-->
         <li class="contact-item">
-          <a href="mailto:info@devstudio.com" class="link contacts">
+          <a href="mailto:info@devstudio.com" class="contacts">
             <svg class="svg-cont" width="16" height="12">
               <use href="./images/icons.svg#icon-envelope"></use>
             </svg>
@@ -44,7 +44,7 @@
         </li>
         <!--telnummber-->
         <li class="contact-item">
-          <a href="tel:+380961111111" class="link contacts">
+          <a href="tel:+380961111111" class="contacts">
             <svg class="svg-cont" width="10" height="16">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>
@@ -57,164 +57,164 @@
   <!--main content of page-->
   <main>
     <!-- main портфоліо -->
-    <section class="section">
+    <section class="portfolio">
       <div class="container">
-        <h1 class="section-titel opacity">Наші роботи</h1>
+        <h1 hidden>Наші роботи</h1>
 
         <!-- навігація портфоліо -->
-        <ul class="list works flex">
-          <li class="item"><button class="button current">Усі</button></li>
-          <li class="item"><button class="button primary">Веб-сайти</button></li>
-          <li class="item"><button class="button primary">Додатки</button></li>
-          <li class="item"><button class="button primary">Дизайн</button></li>
-          <li class="item"><button class="button primary">Маркетинг</button></li>
+        <ul class="filter">
+          <li class="filter__item"><button class="filter__btn filter__btn--current">Усі</button></li>
+          <li class="filter__item"><button class="filter__btn ">Веб-сайти</button></li>
+          <li class="filter__item"><button class="filter__btn ">Додатки</button></li>
+          <li class="filter__item"><button class="filter__btn ">Дизайн</button></li>
+          <li class="filter__item"><button class="filter__btn ">Маркетинг</button></li>
         </ul>
         <!-- продукти -->
-        <ul class="list flex wrap">
-          <li class="item">
-            <a href="">
-              <div class="img-thumb">
-                <img class="image-no-gap" src="./images/technokriak.jpg" width="370" alt="Технокряк" />
+        <ul class="product">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <div class="thumb">
+                <img src="./images/technokriak.jpg" width="370" alt="Технокряк" />
 
-                <p class="img-thumb-desc">
+                <p class="product__info">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                   приватну особу.
                 </p>
               </div>
-              <div class="items">
-                <h3 class="customer">Технокряк</h3>
-                <p class="product">Веб-сайт</p>
+              <div class="product__meta">
+                <h3 class="product__title">Технокряк</h3>
+                <p class="product__text">Веб-сайт</p>
               </div>
             </a>
           </li>
-          <li class="item">
-            <a href="">
-              <div class="img-thumb">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <div class="thumb">
                 <img class="image-no-gap" src="./images/posterNewOrlean.jpg" width="370"
                   alt="Постер New Orleans vs Golden Star" />
-                <p class="img-thumb-desc">
+                <p class="product__desc">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                   приватну особу.
                 </p>
               </div>
-              <div class="items">
-                <h3 class="customer">Постер New Orlean vs Golden Star</h3>
-                <p class="product">Дизайн</p>
+              <div class="product__footer">
+                <h3 class="product__titel">Постер New Orlean vs Golden Star</h3>
+                <p class="product__sub-titel">Дизайн</p>
               </div>
             </a>
           </li>
-          <li class="item">
-            <a href="">
-              <div class="img-thumb">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <div class="thumb">
                 <img class="image-no-gap" src="./images/seafood.jpg" width="370" alt="Ресторан Seafood" />
-                <p class="img-thumb-desc">
+                <p class="product__desc">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                   приватну особу.
                 </p>
               </div>
-              <div class="items">
-                <h3 class="customer">Ресторан Seafood</h3>
-                <p class="product">Додаток</p>
+              <div class="product__footer">
+                <h3 class="product__titel">Ресторан Seafood</h3>
+                <p class="product__sub-titel">Додаток</p>
               </div>
             </a>
           </li>
-          <li class="item">
-            <a href="">
-              <div class="img-thumb">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <div class="thumb">
                 <img class="image-no-gap" src="./images/prime.jpg" width="370" alt="Проєкт Prime" />
-                <p class="img-thumb-desc">
+                <p class="product__desc">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                   приватну особу.
                 </p>
               </div>
-              <div class="items">
-                <h3 class="customer">Проєкт Prime</h3>
-                <p class="product">Маркетинг</p>
+              <div class="product__footer">
+                <h3 class="product__titel">Проєкт Prime</h3>
+                <p class="product__sub-titel">Маркетинг</p>
               </div>
             </a>
           </li>
-          <li class="item">
-            <a href="">
-              <div class="img-thumb">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <div class="thumb">
                 <img class="image-no-gap" src="./images/boxes.jpg" width="370" alt="Проєкт Boxes" />
-                <p class="img-thumb-desc">
+                <p class="product__desc">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                   приватну особу.
                 </p>
               </div>
-              <div class="items">
-                <h3 class="customer">Проєкт Boxes</h3>
-                <p class="product">Додаток</p>
+              <div class="product__footer">
+                <h3 class="product__titel">Проєкт Boxes</h3>
+                <p class="product__sub-titel">Додаток</p>
               </div>
             </a>
           </li>
-          <li class="item">
-            <a href="">
-              <div class="img-thumb">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <div class="thumb">
                 <img class="image-no-gap" src="./images/borders.jpg" width="370" alt="Inspiration has no Borders" />
-                <p class="img-thumb-desc">
+                <p class="product__desc">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                   приватну особу.
                 </p>
               </div>
-              <div class="items">
-                <h3 class="customer">Inspiration has no Borders</h3>
-                <p class="product">Веб-сайт</p>
+              <div class="product__footer">
+                <h3 class="product__titel">Inspiration has no Borders</h3>
+                <p class="product__sub-titel">Веб-сайт</p>
               </div>
             </a>
           </li>
-          <li class="item">
-            <a href="">
-              <div class="img-thumb">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <div class="thumb">
                 <img class="image-no-gap" src="./images/limitedEdition.jpg" width="370" alt="Видання Limited Edition" />
-                <p class="img-thumb-desc">
+                <p class="product__desc">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                   приватну особу.
                 </p>
               </div>
-              <div class="items">
-                <h3 class="customer">Видання Limited Edition</h3>
-                <p class="product">Дизайн</p>
+              <div class="product__footer">
+                <h3 class="product__titel">Видання Limited Edition</h3>
+                <p class="product__sub-titel">Дизайн</p>
               </div>
             </a>
           </li>
-          <li class="item">
-            <a href="">
-              <div class="img-thumb">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <div class="thumb">
                 <img class="image-no-gap" src="./images/lab.jpg" width="370" alt="Проєкт LAB" />
-                <p class="img-thumb-desc">
+                <p class="product__desc">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                   приватну особу.
                 </p>
               </div>
-              <div class="items">
-                <h3 class="customer">Проєкт LAB</h3>
-                <p class="product">Маркетинг</p>
+              <div class="product__footer">
+                <h3 class="product__titel">Проєкт LAB</h3>
+                <p class="product__sub-titel">Маркетинг</p>
               </div>
             </a>
           </li>
-          <li class="item">
-            <a href="">
-              <div class="img-thumb">
+          <li class="product__item">
+            <a class="product__link" href="#">
+              <div class="thumb">
                 <img class="image-no-gap" src="./images/growingBusines.jpg" width="370" alt="Growing Business" />
-                <p class="img-thumb-desc">
+                <p class="product__desc">
                   Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                   Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                   приватну особу.
                 </p>
               </div>
 
-              <div class="items">
-                <h3 class="customer">Growing Business</h3>
-                <p class="product">Додаток</p>
+              <div class="product__footer">
+                <h3 class="product__titel">Growing Business</h3>
+                <p class="product__sub-titel">Додаток</p>
               </div>
             </a>
           </li>
@@ -225,7 +225,7 @@
 
   <!--footer of page-->
   <footer class="section-footer">
-    <div class="container flex">
+    <div class="container flex-footer">
       <div>
         <!--logo-->
         <a href="./index.html" class="logo down" lang="en">
@@ -251,28 +251,28 @@
         <h3 class="media-titel">Приєднуйтесь</h3>
         <ul class="social-media list">
           <li class="media-item footer">
-            <a class="media-link" href="http://">
+            <a class="media-link" href="#">
               <svg class="svg svg--white" width="20" height="20">
                 <use href="./images/icons.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="media-item footer">
-            <a class="media-link" href="http://">
+            <a class="media-link" href="#">
               <svg class="svg svg--white" width="20" height="20">
                 <use href="./images/icons.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
           <li class="media-item footer">
-            <a class="media-link" href="http://">
+            <a class="media-link" href="#">
               <svg class="svg svg--white" width="20" height="20">
                 <use href="./images/icons.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="media-item footer">
-            <a class="media-link" href="http://">
+            <a class="media-link" href="#">
               <svg class="svg svg--white" width="20" height="20">
                 <use href="./images/icons.svg#icon-linkedin"></use>
               </svg>
@@ -284,8 +284,8 @@
         <h3 class="footer-titel">підпишіться на розсилку</h3>
         <form class="form-footer" action="">
           <div class="flex">
-            <label class="no-display" for="email">email</label>
-            <input class="input-field footer" type="email" name="email" id="email" placeholder="E-mail" />
+            <label class="no-display" >email</label>
+            <input class="input-field footer" type="email" name="email"  placeholder="E-mail" />
   
             <button class="button main footer" type="submit">
               Підписатися

@@ -1,16 +1,31 @@
 /* стайл основа */
 body {
-    font-family: Roboto, sans-serif;
-    /* font-weight: 400; */
-    font-size: 14px;
-    line-height: 1.71;
-    color: $primary-text-color;
-    background-color: $primary-white-color;
+  font-family: Roboto, sans-serif;
+  /* font-weight: 400; */
+  font-size: 14px;
+  line-height: 1.71;
+  color: $primary-text-color;
+  background-color: $primary-white-color;
+}
+section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 /* стайл лінків */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /*чистить відступи у заголовках і абзаці*/
 h1,
 h2,
@@ -19,5 +34,14 @@ h4,
 h5,
 h6,
 p {
-    margin: 0;
+  margin: 0;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+// navigation
+nav {
+    display: flex;
+    align-items: center;
 }
