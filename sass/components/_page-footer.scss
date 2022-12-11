@@ -1,0 +1,130 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $sec-bgr-color;
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.address {
+  width: 230px;
+}
+.adr {
+  margin-top: 20px;
+
+  &__item {
+    margin-bottom: 9px;
+    font-style: normal;
+    letter-spacing: 00.03em;
+    color: $primary-white-color;
+  }
+  &__contact {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color $transititon-time $cubic-fnc;
+  }
+  &__contact:hover,
+  &__contact:focus {
+    color: $accent-color;
+    outline-width: 0;
+  }
+}
+.join {
+  padding: 0;
+  margin-left: 60px;
+  &__title {
+    margin-bottom: 20px;
+    @include font(700, 14px, 1.14, 00.03em);
+
+    text-transform: uppercase;
+    color: $primary-white-color;
+  }
+  &__list {
+    @include centeredFlex(flex, center, center);
+    gap: 10px;
+  }
+  &__item {
+    border-radius: 50%;
+    background-color: $bgr-media-footer;
+    transition: background-color $transititon-time $cubic-fnc;
+  }
+  &__link {
+    @include centeredFlex(flex, center, center);
+    position: relative;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: inherit;
+    color: $primary-white-color;
+    transition: background-color $transititon-time $cubic-fnc;
+  }
+  &__item:hover,
+  &__link:focus {
+    background-color: $accent-color;
+    outline-width: 0;
+  }
+}
+.folow {
+  padding: 0;
+  margin-left: auto;
+  &__title {
+    margin-bottom: 20px;
+    @include font(700, 14px, 1.14, 00.03em);
+
+    text-transform: uppercase;
+    color: $primary-white-color;
+  }
+
+  &__form {
+    display: flex;
+    width: 570px;
+    gap: 12px;
+  }
+  &__label {
+    width: 100%;
+  }
+  &__input {
+    @extend%input;
+    margin-right: 12px;
+    padding: 15px 16px;
+    background-color: $sec-bgr-color;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  }
+  &__input:hover,
+  &__input:focus {
+    border-color: $accent-color;
+    outline-width: 0;
+  }
+  &__input::placeholder {
+    @include font(400, 16px, 1.25, 00.03em);
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__btn {
+    @extend%btn;
+    @include font(700, 16px, 1.88, 00.06em);
+    min-width: 216px;
+    position: relative;
+    padding: 10px 28px;
+    text-align: center;
+    background-color: $accent-color;
+  }
+  &__btn:hover,
+  &__btn:focus {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    outline-width: 0;
+  }
+  &__icon {
+    @extend .icon;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  &__icon:hover,
+  &__icon:focus {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    outline-width: 0;
+  }
+}

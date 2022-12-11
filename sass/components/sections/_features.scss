@@ -1,0 +1,25 @@
+.features {
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__icon {
+    @include centeredFlex(flex, center, center);
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: $thirth-bgr-color;
+  }
+  &__title {
+    margin-bottom: 10px;
+
+    @include font(700, 14px, 1.14, 0.03);
+    text-transform: uppercase;
+
+    color: $title-text-color;
+  }
+  &__desc {
+    letter-spacing: 0.03em;
+  }
+}

@@ -1,58 +1,52 @@
 /*cтилізує контент по центрі сторінки*/
 .container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon {
+  fill: currentColor;
+  transition: fill $transititon-time $cubic-fnc;
+}
+.media {
+  @include centeredFlex(flex, center, center);
+  gap: 10px;
+  &__item {
+    border-radius: 50%;
   }
 
-
-
-/* стайл лголовна кнопка */
-.button {
-  @extend%btn;
-  padding: 10px 32px;
-  min-width: 216px;
-  align-items: center;
-  justify-content: center;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: $primary-white-color;
-  background-color: $accent-color;
-  box-shadow: none;
-  transition: box-shadow $transititon-time $cubic-fnc;
-  &:hover,
-  &:focus {
-    background-color: #188ce8;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &__link {
+    @include centeredFlex(flex, center, center);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: inherit;
+    color: $primary-icon-color;
+    transition: background-color $transititon-time $cubic-fnc;
+  }
+  
+}
+.media__link{
+  .media__item:hover &{
+    background-color: $accent-color;
   }
 }
+.icon{
+  .media__link:focus &,
+  .media__item:hover &{
+    fill: $primary-white-color;
+    outline-width: 0;
+    }
+    .clients__link:hover &,
+    .clients__link:focus &{
+      fill:$accent-color;
+      outline-width: 0;
+    }
+    
 
-.opacity {
-  position: absolute;
-  opacity: 0;
-}
-.section__title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: $title-text-color;
-}
-.section__title--opacity {
-    @extend .opacity;
-}
-.sub-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+    
+   
 }

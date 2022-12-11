@@ -1,14 +1,20 @@
 @import 'base/normalize';
 @import 'utils/vars';
+@import 'base/fonts';
 @import 'base/reset';
 
 @import 'utils/placeholder';
 @import 'utils/mixins';
-
 @import 'base/common';
 @import 'components/page-header';
 @import 'components/nav';
 @import 'components/logo';
+@import 'components/sections/hero';
+@import 'components/sections/features';
+@import 'components/sections/works';
+@import'components/sections/team';
+@import'components/sections/clients';
+@import'components/page-footer';
 
-@import 'components/_hero';
-@import 'components/feacher';
+@import 'components/sections/portfolio';
+@import 'components/modal';

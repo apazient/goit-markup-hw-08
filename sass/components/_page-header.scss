@@ -1,54 +1,44 @@
 //container page-header
 .page-header {
-    border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 //flex container
-.header__container{
-    display: flex;
+.header__container {
+  display: flex;
 }
 //styles contact of the firma
 .contact {
+  display: flex;
+  margin-left: auto;
+  height: 100%;
+  gap: 30px;
+
+  &__item {
+    display: block;
+  }
+
+  &__link {
     display: flex;
-    margin-left: auto;
-        height: 100%;
-    &__item {
-        display: block;
-    }
+    padding: 32px 0;
+    gap: 10px;
+    align-items: center;
 
-    &__item:not(:last-child) {
-        margin-right: 30px;
-    }
+    @include font(500, 14px, 1.14, 0.02em);
 
-    &__link {
-        display: flex;
-        padding: 32px 0;
-        align-items: center;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-        color: $primary-text-color;
-        transition: color $transititon-time $cubic-fnc;
-    }
-
-    &__link:hover,
-    &__link:focus {
-        color: $accent-color;
-    }
-
-    &__icon {
-        padding: 0;
-        margin-right: 10px;
-        fill: $primary-text-color;
-        transition: fill $transititon-time $cubic-fnc;
-    }
-
+    color: $primary-text-color;
+    transition: color $transititon-time $cubic-fnc;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+    outline-width: 0;
+  }
 }
 
 .contact__icon {
-
-    .contact__link:hover &,
-    .contact__link:focus & {
-        fill: $accent-color;
-    }
+  .contact__link:hover &,
+  .contact__link:focus & {
+    fill: $accent-color;
+    outline-width: 0;
+  }
 }

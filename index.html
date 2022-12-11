@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Студія</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-    />
-
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
@@ -22,7 +17,7 @@
           <nav>
             <!--logo-->
             <a href="./index.html" class="logo" lang="en"
-              >Web<span class="logo--black">Studio</span>
+              >Web<span class="logo__nav">Studio</span>
             </a>
             <!--menu-->
             <ul class="navigation">
@@ -93,44 +88,44 @@
               </p>
             </li>
             <!--featcher 2-->
-            <li class="feachers__item">
-              <div class="feachers__icon">
+            <li class="features__item">
+              <div class="features__icon">
                 <svg width="67" height="70">
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
               <!--feacher head-->
-              <h3 class="feachers__title">пунктуальність</h3>
+              <h3 class="features__title">пунктуальність</h3>
               <!--featcher description-->
-              <p class="feachers__desc">
+              <p class="features__desc">
                 Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
               </p>
             </li>
             <!--featcher 3-->
-            <li class="feachers__item">
-              <div class="feachers__icon">
+            <li class="features__item">
+              <div class="features__icon">
                 <svg width="70" height="54">
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
               <!--feacher head-->
-              <h3 class="feachers__title">планування</h3>
+              <h3 class="features__title">планування</h3>
               <!--featcher description-->
-              <p class="feachers__desc">
+              <p class="features__desc">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
             <!--featcher 4-->
-            <li class="feachers__item">
-              <div class="feachers__icon">
+            <li class="features__item">
+              <div class="features__icon">
                 <svg width="55" height="60">
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
               <!--feacher head-->
-              <h3 class="feachers__title">сучасні технології</h3>
+              <h3 class="features__title">сучасні технології</h3>
               <!--featcher description-->
-              <p class="feachers__desc">
+              <p class="features__desc">
                 Значимість цих проблем настільки очевидна, що реалізація планових завдань.
               </p>
             </li>
@@ -233,7 +228,7 @@
                   </li>
                   <li class="media__item">
                     <a class="media__link" href="#">
-                      <svg class=" " width="20" height="20">
+                      <svg class="icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter"></use>
                       </svg>
                     </a>
@@ -392,7 +387,7 @@
           <div class="address">
             <!--logo-->
             <a href="./index.html" class="logo" lang="en">
-              Web<span class="logo logo--white">Studio</span>
+              Web<span class="logo__footer">Studio</span>
             </a>
             <!--contacts-->
             <address>
@@ -420,22 +415,22 @@
                   </svg>
                 </a>
               </li>
-              <li class="media__item">
-                <a class="media__link" href="#">
+              <li class="join__item">
+                <a class="join__link" href="#">
                   <svg class="icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
-              <li class="media__item">
-                <a class="media__link" href="#">
+              <li class="join__item">
+                <a class="join__link" href="#">
                   <svg class="icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
-              <li class="media__item">
-                <a class="media__link" href="#">
+              <li class="join__item">
+                <a class="join__link" href="#">
                   <svg class="icon" width="20" height="20">
                     <use href="./images/icons.svg#icon-linkedin"></use>
                   </svg>
@@ -444,14 +439,14 @@
             </ul>
           </section>
           <section class="folow">
-            <h3 class="footer__title">підпишіться на розсилку</h3>
+            <h3 class="folow__title">підпишіться на розсилку</h3>
             <form class="folow__form" action="">
               <label class="folow__label">
                 <input class="folow__input" type="email" placeholder="E-mail" />
               </label>
               <button class="folow__btn" type="submit">
                 Підписатися
-                <svg class="icon" width="24" height="24">
+                <svg class="folow__icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </button>
@@ -463,7 +458,7 @@
     <!-- modal window for the button -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" data-modal-close class="btn-close">
+        <button type="button" class="btn-close" data-modal-close>
           <svg class="icon-close" width="18" height="18">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -475,58 +470,41 @@
               >Ім'я
               <div class="field">
                 <input class="field__input" type="text" name="user-name" placeholder=" " />
-                
-                  <svg class="field__icon" width="18" height="18">
-                    <use href="./images/icons.svg#icon-person"></use>
-                  </svg>
-              
+                <svg class="field__icon" width="18" height="18">
+                  <use href="./images/icons.svg#icon-person"></use>
+                </svg>
               </div>
             </label>
             <label class="form__label">
               Телефон
-              <div class="form-field">
-                <input class="input-field" type="tel" name="tel" />
-                <span class="icon-box">
-                  <svg class="icon-user" width="18" height="18">
-                    <use
-                      class="icon-user--position"
-                      href="./images/icons.svg#icon-phone-black"
-                    ></use>
-                  </svg>
-                </span>
+              <div class="field">
+                <input class="field__input" type="tel" name="tel" />
+                <svg class="field__icon" width="18" height="18">
+                  <use href="./images/icons.svg#icon-phone-black"></use>
+                </svg>
               </div>
             </label>
-
             <label class="label">
               Пошта
-              <div class="form-field">
-                <input class="input-field" type="email" name="email" />
-                <span class="icon-box">
-                  <svg class="icon-user" width="18" height="18">
-                    <use
-                      class="icon-user--position"
-                      href="./images/icons.svg#icon-email-black"
-                    ></use>
-                  </svg>
-                </span>
+              <div class="field">
+                <input class="field__input" type="email" name="email" />
+                <svg class="field__icon" width="18" height="18">
+                  <use href="./images/icons.svg#icon-email-black"></use>
+                </svg>
               </div>
             </label>
             <label class="form__label">
               Коментар
-              <div class="field">                
-                <textarea
-                  class="textarea"
-                  rows="6"
-                  placeholder="Введіть текст">
-              </textarea>
+              <div class="field">
+                <textarea class="field__textarea" rows="6" placeholder="Введіть текст"></textarea>
               </div>
             </label>
           </div>
           <div class="consent">
             <label class="consent__label">
               <input class="consent__input" type="checkbox" />
-              <span class="consent__checkbox">
-                <svg class="icon__chekbox" width="16" height="16">
+              <span class="consent__box">
+                <svg class="consent__icon" width="16" height="16">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
@@ -534,9 +512,7 @@
               <a class="consent__link" href="">Умови договору</a>
             </label>
           </div>
-        
-            <button class="submit-btn" type="submit">Відправити</button>
-        
+          <button class="submit-btn" type="submit">Відправити</button>
         </form>
       </div>
     </div>
