@@ -289,8 +289,9 @@ nav {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.media__item:hover .media__link {
+.media__link:focus, .media__item:hover .media__link, .media__item:focus .media__link {
   background-color: #2196f3;
+  outline-width: 0;
 }
 
 .media__link:focus .icon, .media__link:focus .folow__icon, .media__item:hover .icon, .media__item:hover .folow__icon {
@@ -438,6 +439,10 @@ nav {
   outline-width: 0;
 }
 
+.features__title--hidden {
+  position: absolute;
+  opacity: 0;
+}
 .features__list {
   display: flex;
   gap: 30px;
@@ -729,7 +734,12 @@ nav {
   outline-width: 0;
 }
 
-.filter {
+.portfolio__title--hidden {
+  position: absolute;
+  opacity: 0;
+}
+
+.filter__list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -761,7 +771,15 @@ nav {
   box-shadow: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.product__info {
+.product__item:hover, .product__item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  outline-width: 0;
+}
+.product__img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.product__img-overflow {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -777,11 +795,7 @@ nav {
   opacity: 1;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.product__item:hover, .product__item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  outline-width: 0;
-}
-.product__meta {
+.product__info-wrap {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top-color: rgb(238, 238, 238);
@@ -789,24 +803,19 @@ nav {
   border-top-width: 1px;
   border-top: 0;
 }
-.product__title {
+.product__info-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
 }
-.product__text {
+.product__info-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: #757575;
-}
-
-.thumb {
-  position: relative;
-  overflow: hidden;
 }
 
 .product__link:hover .product__info, .product__link:focus .product__info {
@@ -924,8 +933,9 @@ nav {
 .field__icon {
   position: absolute;
   left: 12px;
-  top: 0;
+  top: 5px;
   transform: translateY(50%);
+  pointer-events: none;
 }
 .field__textarea {
   padding: 12px 16px;

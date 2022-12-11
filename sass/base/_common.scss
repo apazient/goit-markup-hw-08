@@ -30,14 +30,18 @@
   
 }
 .media__link{
-  .media__item:hover &{
+  &:focus,
+  .media__item:hover &,
+  .media__item:focus &{
     background-color: $accent-color;
+    outline-width: 0;
   }
 }
 .icon{
   .media__link:focus &,
   .media__item:hover &{
     fill: $primary-white-color;
+    
     outline-width: 0;
     }
     .clients__link:hover &,
