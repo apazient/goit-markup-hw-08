@@ -1,5 +1,132 @@
+//**buttn switch modale menu*//
+.nav__btn {
+  display: inline-flex;
+  
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  @media screen and(min-width:$tablet) {
+    display: none;
+  }
+}
+
+/*мобільне меню*/
+.mobile-nav {
+  // display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 40px;
+  text-align: left;
+
+  background-color: $primary-white-color;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  transform: translate(100%, -100%);
+  transition: transform $transititon-time $cubic-fnc;
+
+  overflow-y: scroll;
+
+  @media screen and(min-width:$tablet) {
+    display: none;
+  }
+
+  &.is-open {
+    transform: translate(0, 0);
+  }
+
+  &__btn {
+    display: inline-flex;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.mobile-menu {
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__link {
+    @include font(500, 40px, 1.17em, 0.02em);
+    color: $title-text-color;
+  }
+}
+
+.mobile-menu__link {
+  &--current {
+    color: $accent-color;
+  }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile-cont {
+  &__item {
+    margin-bottom: 32px;
+  }
+
+  &__item:last-child {
+    margin-bottom: 64px;
+  }
+
+  &__link {
+    @include font(500, 34px, 1.77, 0.02em);
+    color: $primary-text-color;
+  }
+}
+
+.mobile-cont__link {
+  &--current {
+    color: $accent-color;
+  }
+
+  &--small {
+    @include font(500, 24px, 1.16, 0.02);
+  }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile-media {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: baseline;
+  gap: 10px;
+
+  &__item:not(:last-child) {
+    padding-right: 10px;
+
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  &__link {
+    @include font(500, 18px, 1.2em, 0.02em);
+    color: $accent-color;
+  }
+}
+
 //navigation
 .navigation {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   display: flex;
   margin-left: 93px;
   height: 100%;
@@ -9,16 +136,17 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: $title-text-color;
+  &__item {
+    position: relative;
+  }
+  &__link {
+    display: block;
+    padding: 32px 0;
+    color: $title-text-color;
+    transition: color $transititon-time $cubic-fnc;
+  }
 }
-.navigation__item {
-  position: relative;
-}
-
 .navigation__link {
-  display: block;
-  padding: 32px 0;
-  color: $title-text-color;
-  transition: color $transititon-time $cubic-fnc;
   &:hover,
   &:focus {
     color: $accent-color;

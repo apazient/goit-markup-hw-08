@@ -1,20 +1,50 @@
 .hero {
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
+  margin: 0 auto;
   text-align: center;
-
   background-color: $sec-bgr-color;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../images/hero.jpg');
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    image-set(
+      url(../images/hero/bg_mobile_480.jpg) 1x,
+      url(../images/hero/bg_mobile_960.jpg) 2x,
+      url(../images/hero/bg_mobile_1440.jpg) 3x
+    );
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
+  max-width: 480px;
+ 
+  padding: 118px 0;
+  @media (min-width: 481px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      image-set(
+        url(../images/hero/bg_tablet_768.jpg) 1x,
+        url(../images/hero/bg_tablet_153.jpg) 2x,
+        url(../images/hero/bg_tablet_2304.jpg) 3x
+      );
+    max-width: 768px;
+  }
+  @media (min-width: 769px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      image-set(
+        url(../images/hero/bg_desctop_160.jpg) 1x,
+        url(../images/hero/bg_desctop_320.jpg) 2x,
+        url(../images/hero/bg_desctop_480.jpg) 3x
+      );
+    max-width: 1600px;
+    
+    
+  }
+  @media screen and(min-width:$desktop){
+    padding: 200px 0;
+  }
   &__title {
-    margin-bottom: 40px;
+    @media screen and(max-width:1199px){
+        @include font(900, 26px, 1.62, 0.06em);
+       
+    }
+    margin-bottom: 30px;
 
     @include font(900, 44px, 1.36, 0.06em);
 

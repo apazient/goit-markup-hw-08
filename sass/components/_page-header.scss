@@ -1,23 +1,55 @@
 //container page-header
-.page-header {
+.header {
+  @media screen and(max-width:767px) {
+    // position: relative;
+  }
   border-bottom: 1px solid #ececec;
+
+  &__container {
+    display: flex;
+  }
 }
-//flex container
-.header__container {
-  display: flex;
-}
+
+
 //styles contact of the firma
 .contact {
-  display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and(min-width:$tablet) and(max-width:1199px){
+   
+     display: block;
+    // padding: 15px 0;
+    
+  }
+  @media  screen and (min-width:$desktop) {
+display: flex;
+    gap: 30px;
+  } 
   margin-left: auto;
   height: 100%;
-  gap: 30px;
+ 
 
   &__item {
     display: block;
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
   }
 
   &__link {
+    @media screen and(min-width:$tablet) and(max-width:1199px) {
+      
+      vertical-align: middle;  
+        padding: 0 0 15px 0; 
+        &--top {
+          padding: 15px 0 0 0;
+        }
+      
+    }
+    
+    
+         
     display: flex;
     padding: 32px 0;
     gap: 10px;

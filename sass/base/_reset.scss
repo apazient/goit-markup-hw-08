@@ -11,6 +11,10 @@ section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+address{
+padding-top: 20px;
+padding-bottom: 60px;
+}
 /* стайл лінків */
 a {
   text-decoration: none;
@@ -39,9 +43,17 @@ p {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 // navigation
 nav {
+  @media screen and (max-width:767px) {
+  position:relative ;
+    width: 100%;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
   display: flex;
   align-items: center;
+  
 }

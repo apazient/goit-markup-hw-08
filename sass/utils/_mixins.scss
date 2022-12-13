@@ -11,3 +11,9 @@
     justify-content: $jс;
     align-items: $ai;
 }
+@mixin bgrImg($width,$height, $pt,){
+    max-width:$width ;
+    height: $height;
+    padding-top: $pt;
+
+}

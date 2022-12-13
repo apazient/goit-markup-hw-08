@@ -1,12 +1,14 @@
-/*стайл основи для модального вікна*/
+/*стайл основи для модального вікна для таблет/десктоп*/
 .backdrop {
   position: fixed;
+  // padding: 15px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   visibility: visible;
   opacity: 1;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   transition: visibility $transititon-time $cubic-fnc, opacity $transititon-time $cubic-fnc;
   /*скриває модальне вікно*/
@@ -16,6 +18,9 @@
     opacity: 0;
     pointer-events: none;
   }
+  @media screen and(min-width:$tablet) {
+    overflow-y: inherit;
+  }
 }
 
 /* стайл модального вікна */
@@ -24,12 +29,24 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 580px;
+  width: calc(100% - 30px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background: $primary-white-color;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform $transititon-time $cubic-fnc;
+  @media screen and(min-width:$mobile) {
+    width: 450px;
+   
+  }
+  @media screen and(min-width:$desktop) {
+    width: 528px;
+    height: 581px;
+  }
 }
 .btn-close {
   position: absolute;
@@ -60,7 +77,7 @@
 
 /*стайл форми*/
 .form {
-  margin: 40px;
+  padding: 40px;
   &__title {
     margin-bottom: 12px;
     @include font(700, 20px, 1.15, 0.03em);
@@ -76,15 +93,16 @@
     color: $primary-text-color;
   }
 }
-
 /* стайл заголовка у форми */
 .field {
   position: relative;
   display: flex;
-  margin-bottom: 10px;
-  %input {
-    width: 100%;
 
+  %input {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    width: 100%;
     border-width: 1px;
     border-radius: 4px;
     border-style: solid;
@@ -93,7 +111,7 @@
   }
   &__input {
     @extend%input;
-    padding: 12px 14px 12px 42px;
+    padding: 11px 12px 11px 42px;
   }
   &__input:hover,
   &__input:focus {
@@ -123,14 +141,16 @@
   }
 }
 .consent {
-  position: relative;
+  // position: relative;
   @include centeredFlex(flex, center, center);
-  margin-bottom: 30px;
+  @media screen and(min-width:$mobile) {
+    margin-bottom: 30px;
+  }
 
   &__label {
+  position: relative;
     display: inline-block;
-    line-height: 1.71em;
-    letter-spacing: 0.03em;
+    @include font(400, 12px, 1.16, 0.03em);
     color: $primary-text-color;
     transition: color $transititon-time $cubic-fnc;
   }
@@ -139,12 +159,12 @@
     appearance: none;
     top: 20%;
   }
-
-  &__link {
-    color: $accent-color;
-    text-decoration-line: underline;
+    &__link {
+      color: $accent-color;
+      text-decoration-line: underline;
+    }
   }
-}
+
 .consent__box {
   margin-right: 8px;
   display: inline-block;
@@ -165,10 +185,9 @@
 }
 .consent__icon {
   position: absolute;
-  top: 50%;
-  left: 9%;
-  transform: translateY(-50%);
+ top:7px;
 
+  transform: translateY(-50%);
   fill: transparent;
   .consent__input:checked + .consent__box & {
     fill: $primary-white-color;
@@ -176,15 +195,14 @@
 }
 .submit-btn {
   @extend%btn;
-
-  position: relative;
-  left: 25%;
-  padding: 10px 32px;
+ position: relative;
+  padding: 10px 0;
   min-width: 216px;
-  align-items: center;
-
+  bottom: 0;
+  left:50%;
+  transform: translateX(-50%);
+ 
   @include font(700, 16px, 1.88, 00.06em);
-
   color: $primary-white-color;
   background-color: $accent-color;
   box-shadow: none;

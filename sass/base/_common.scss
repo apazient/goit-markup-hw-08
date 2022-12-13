@@ -1,16 +1,27 @@
 /*cтилізує контент по центрі сторінки*/
 .container {
-  width: 1200px;
+  min-width: 320px;
+  // max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and(min-width:$mobile) {
+    max-width: $mobile;
+    
+  }
+
+  @media screen and(min-width:$tablet) {
+    max-width: $tablet;
+   
+  }
+
+  @media screen and(min-width:$desktop) {
+    max-width: $desktop;
+    
+  }
 }
 
-.icon {
-  fill: currentColor;
-  transition: fill $transititon-time $cubic-fnc;
-}
 .media {
   @include centeredFlex(flex, center, center);
   gap: 10px;
@@ -27,30 +38,41 @@
     color: $primary-icon-color;
     transition: background-color $transititon-time $cubic-fnc;
   }
-  
 }
-.media__link{
+.media__link {
   &:focus,
   .media__item:hover &,
-  .media__item:focus &{
+  .media__item:focus & {
     background-color: $accent-color;
     outline-width: 0;
   }
 }
-.icon{
-  .media__link:focus &,
-  .media__item:hover &{
-    fill: $primary-white-color;
-    
-    outline-width: 0;
-    }
-    .clients__link:hover &,
-    .clients__link:focus &{
-      fill:$accent-color;
-      outline-width: 0;
-    }
-    
+.icon {
+  fill: currentColor;
+  transition: fill $transititon-time $cubic-fnc;
+  .mobile-nav__btn & {
+    fill: $title-text-color;
+  }
+  .mobile-nav__btn:hover &,
+  .mobile-nav__btn:focus &{
+    fill:$accent-color;
+  }
+  .nav__btn.is-open &__close {
+    display: block;
+  }
+  .nav__btn.is-open &__menu {
+    display: none;
+  }
 
-    
-   
+  .media__link:focus &,
+  .media__item:hover & {
+    fill: $primary-white-color;
+
+    outline-width: 0;
+  }
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: $accent-color;
+    outline-width: 0;
+  }
 }
