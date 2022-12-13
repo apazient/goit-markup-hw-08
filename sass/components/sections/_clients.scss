@@ -17,21 +17,30 @@
     flex-wrap: wrap;
     gap: 30px;
   }
-  &__item {
-    @media screen and(max-width:767px){
-        max-width: calc((100% - 30px) / 2);
-    }
+&__item{
+  @media screen and (min-width:320px) and( max-width: 479px){
+    flex-basis: calc((100% - 30px ) / 2 );
+    
+  }
+}
+  &__link {
+    max-width: 210px;
    
-    @media screen and(min-width:$tablet) and(max-width:1199px) {
-      max-width: calc((100% - 60px) / 3);
+    @media screen and(min-width:$mobile) {
+      width: 210px;
     }
+
+    @media screen and(min-width:$tablet) {
+      width: 226px;
+    }
+
     @media screen and(min-width:$desktop) {
       width: 170px;
     }
-  }
-  &__link {
     @include centeredFlex(flex, center, center);
     height: 92px;
+
+ 
 
     border: 1px solid $primary-icon-color;
     border-radius: 4px;

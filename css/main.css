@@ -270,25 +270,24 @@ nav {
 
 /*cтилізує контент по центрі сторінки*/
 .container {
-  min-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 479.98px) {
   .container {
-    max-width: 480px;
+    width: 480px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767.98px) {
   .container {
-    max-width: 768px;
+    width: 768px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -359,12 +358,12 @@ nav {
     display: none;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 767.98px) and (max-width: 1199px) {
   .contact {
     display: block;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .contact {
     display: flex;
     gap: 30px;
@@ -388,7 +387,7 @@ nav {
   color: #757575;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 767.98px) and (max-width: 1199px) {
   .contact__link {
     vertical-align: middle;
     padding: 0 0 15px 0;
@@ -414,7 +413,7 @@ nav {
   border: none;
   background-color: transparent;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767.98px) {
   .nav__btn {
     display: none;
   }
@@ -438,7 +437,7 @@ nav {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767.98px) {
   .mobile-nav {
     display: none;
   }
@@ -575,7 +574,7 @@ nav {
   letter-spacing: 0.03em;
   color: #2196f3;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 767.98px) and (max-width: 1199px) {
   .logo {
     padding: 26px 0;
   }
@@ -588,7 +587,7 @@ nav {
     letter-spacing: 0.03em;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .logo {
     padding: 24px 0;
   }
@@ -626,7 +625,7 @@ nav {
     max-width: 1600px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .hero {
     padding: 200px 0;
   }
@@ -674,7 +673,7 @@ nav {
   position: absolute;
   opacity: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767.98px) {
   .features__list {
     display: flex;
     gap: 30px;
@@ -691,7 +690,7 @@ nav {
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 767.98px) and (max-width: 1199px) {
   .features__item {
     width: calc((100% - 30px) / 2);
   }
@@ -789,14 +788,14 @@ nav {
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767.98px) {
   .team__list {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .team__list {
     flex-wrap: nowrap;
   }
@@ -814,7 +813,7 @@ nav {
     margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 767.98px) and (max-width: 1199px) {
   .team__item {
     width: calc((100% - 30px) / 2);
   }
@@ -828,7 +827,7 @@ nav {
     padding-bottom: 24px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .team__info {
     padding-bottom: 30px;
   }
@@ -877,22 +876,13 @@ nav {
   flex-wrap: wrap;
   gap: 30px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
   .clients__item {
-    max-width: calc((100% - 30px) / 2);
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .clients__item {
-    max-width: calc((100% - 60px) / 3);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .clients__item {
-    width: 170px;
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 .clients__link {
+  max-width: 210px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -901,6 +891,21 @@ nav {
   border-radius: 4px;
   color: #afb1b8;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 479.98px) {
+  .clients__link {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 767.98px) {
+  .clients__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1199.98px) {
+  .clients__link {
+    width: 170px;
+  }
 }
 .clients__link:hover, .clients__link:focus {
   border-color: #2196f3;
@@ -917,7 +922,7 @@ nav {
     text-align: center;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767.98px) {
   .footer__container {
     display: flex;
     justify-content: center;
@@ -925,20 +930,20 @@ nav {
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .footer__container {
     justify-content: flex-start;
     flex-wrap: nowrap;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767.98px) {
   .address {
     margin-right: 165px;
     text-align: center;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .address {
     margin-right: 70px;
     text-align: left;
@@ -1039,7 +1044,7 @@ nav {
   text-transform: uppercase;
   color: #ffffff;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .folow__form {
     display: flex;
     width: 570px;
@@ -1060,7 +1065,7 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .folow__input {
     margin-right: 12px;
     width: 100%;
@@ -1237,7 +1242,7 @@ nav {
   opacity: 0;
   pointer-events: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767.98px) {
   .backdrop {
     overflow-y: inherit;
   }
@@ -1258,12 +1263,12 @@ nav {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 479.98px) {
   .modal {
     width: 450px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199.98px) {
   .modal {
     width: 528px;
     height: 581px;
@@ -1325,21 +1330,12 @@ nav {
 /* стайл заголовка у форми */
 .field {
   position: relative;
-  display: flex;
-}
-.field .field__textarea, .field .field__input, .field .folow__input {
-  width: 100%;
-  border-width: 1px;
-  border-radius: 4px;
-  border-style: solid;
-  border-color: rgba(33, 33, 33, 0.2);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.field .field__textarea:not(:last-child), .field .field__input:not(:last-child), .field .folow__input:not(:last-child) {
-  margin-bottom: 10px;
 }
 .field__input {
   padding: 11px 12px 11px 42px;
+}
+.field__input:not(:last-child) {
+  margin-bottom: 10px;
 }
 .field__input:hover, .field__input:focus {
   border-color: #2196f3;
@@ -1348,7 +1344,7 @@ nav {
 .field__icon {
   position: absolute;
   left: 12px;
-  top: 5px;
+  top: 25px;
   transform: translateY(50%);
   pointer-events: none;
 }
@@ -1360,17 +1356,17 @@ nav {
   outline-width: 0;
 }
 .field__textarea::-moz-placeholder {
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .field__textarea:-ms-input-placeholder {
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .field__textarea::placeholder {
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -1380,7 +1376,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .consent {
     margin-bottom: 30px;
   }
